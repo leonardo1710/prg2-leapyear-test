@@ -3,7 +3,11 @@ package at.ac.fhcampuswien;
 public class LeapYearChecker {
 
     public boolean isLeapYear(int year) {
-        return false;
+        if (year % 4 != 0) {
+            return false;
+        } else if (year % 400 == 0) {
+            return true;
+        } else return year % 100 != 0;
     }
 
     public static void main(String[] args) {
